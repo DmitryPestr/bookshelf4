@@ -37,6 +37,7 @@
         <h:form>
             <nav class="w3-bar w3-black">
                 <h:link value="Home" outcome="/index.xhtml" styleClass="w3-bar-item w3-button"/>
+
                 <h:commandLink value="Sign in" action="#{currentUser.signIn()}"
                                styleClass="w3-bar-item w3-button w3-right"
                                rendered="#{not currentUser.signedIn}"/>
@@ -45,6 +46,9 @@
                 <h:commandLink value="Sign out" action="#{currentUser.signOut()}"
                                styleClass="w3-bar-item w3-button w3-right"
                                rendered="#{currentUser.signedIn}"/>
+
+                <h:link value="Registration" outcome="/registration.xhtml" styleClass="w3-bar-item w3-button w3-right"/>
+
             </nav>
         </h:form>
 
