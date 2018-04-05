@@ -43,9 +43,9 @@ public class BookDetailsForm {
         logger.info("Book " + book.getId());
 
         List<Reservation> reservations = em.createQuery(
-                "select r from Reservation r"
-                    + "where r.book = :book"
-                    + "and r.user = :user"
+                "select r from Reservation r "
+                    + "where r.book = :book "
+                    + "and r.user = :user "
                     + "and r.status <> 'Released'")
                 .setParameter ("book", book)
                 .setParameter ("user", user)
